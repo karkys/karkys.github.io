@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      h2,
+      p {
+        margin: 10px;
+      }
+
+      /* ONLY the navbar gets these styles */
+      .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+      }
+
+      .navbar li {
+        float: left;
+      }
+
+      .navbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navbar li a:hover {
+        background-color: #111111;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Project: Hardware Security Lab (DMA Fundamentals)</title>
+  </head>
+
+  <body>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="PizzaOrdering.html">Pizza Ordering</a></li>
+      <li><a href="cssExample.html">CSS Example</a></li>
+      <li><a href="projectOne.html">Project One</a></li>
+      <li><a href="projectTwo.html">Project Two</a></li>
+    </ul>
+    <header>
+      <h1>Personal Project: Hardware Security Lab (DMA Fundamentals)</h1>
+      <p>
+        This project documents a hands-on lab where I explored Direct Memory
+        Access (DMA) concepts and how modern software defenses detect and
+        respond to unusual hardware-level behavior. All work was done in a
+        controlled environment for educational purposes.
+      </p>
+    </header>
+
+    <main>
+      <article>
+        <section aria-labelledby="project-image">
+          <h2 id="project-image">Project Image</h2>
+
+          <!-- Replace the src with your own image file name placed in the same folder -->
+          <figure>
+            <img
+              src="dma.jpg"
+              alt="A test bench setup showing a PC and external hardware used for a controlled DMA security lab"
+              width="600"
+              height="400"
+            />
+            <figcaption>
+              Test bench used to study DMA concepts and defensive security
+              controls.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section aria-labelledby="description">
+          <h2 id="description">Project Description</h2>
+          <p>
+            I built a small hardware security lab to better understand how DMA
+            works at a high level The focus of the project was learning
+            fundamentals: system architecture, data flow, and how to identify
+            suspicious behavior.
+          </p>
+          <p>
+            As part of the lab, I reviewed documentation and concepts around
+            memory protection. This improved my understanding of practical
+            security tradeoffs between performance, usability, and protection.
+          </p>
+        </section>
+
+        <section aria-labelledby="skills">
+          <h2 id="skills">Skills Learned</h2>
+          <ul>
+            <li>Core DMA concepts and why they matter for system security</li>
+            <li>
+              PC hardware fundamentals and how peripherals communicate with the
+              host system
+            </li>
+            <li>Security mindset: identifying attack surfaces</li>
+            <li>Memory protection concepts, monitoring/telemetry ideas</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="takeaways">
+          <h2 id="takeaways">Key Takeaways</h2>
+          <p>
+            This project reinforced how much modern security depends on
+            visibility and trust boundaries. It also clarified why many
+            environments (games and enterprise systems alike) invest heavily in
+            detection, prevention, and hardware-backed protections. Most of the
+            programs I examined had little to no security.
+          </p>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Andrew Holmes</p>
+    </footer>
+  </body>
+</html>
