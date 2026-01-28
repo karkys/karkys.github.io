@@ -1,184 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Pizza Ordering Website</title>
+    <title>Pizza Ordering Website</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-    h2, p {
-      margin: 10px;
-    }
+      h2,
+      p {
+        margin: 10px;
+      }
 
-    /* ONLY the navbar gets these styles */
-    .navbar {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333333;
-    }
+      /* ONLY the navbar gets these styles */
+      .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+      }
 
-    .navbar li {
-      float: left;
-    }
+      .navbar li {
+        float: left;
+      }
 
-    .navbar li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
+      .navbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
 
-    .navbar li a:hover {
-      background-color: #111111;
-    }
-  </style>
-</head>
+      .navbar li a:hover {
+        background-color: #111111;
+      }
+    </style>
+  </head>
 
-<body>
-  <ul class="navbar">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="PizzaOrdering.html">Pizza Ordering</a></li>
-    <li><a href="cssExample.html">CSS Example</a></li>
-  </ul>
+  <body>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="PizzaOrdering.html">Pizza Ordering</a></li>
+      <li><a href="cssExample.html">CSS Example</a></li>
+    </ul>
 
-  <h1>Pizza Ordering Form</h1>
-  <h2>Contact information:</h2>
+    <h1>Pizza Ordering Form</h1>
+    <h2>Contact information:</h2>
 
-  <form action="#" method="post">
-    <p>
-      <label for="name">Name:</label>
-      <input id="name" type="text" name="name" required title="Enter your full name">
-    </p>
+    <form action="#" method="post">
+      <p>
+        <label for="name">Name:</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          required
+          title="Enter your full name"
+        />
+      </p>
 
-    <p>
-      <label for="phone">Phone:</label>
-      <input
-        id="phone"
-        type="tel"
-        name="phone"
-        required
-        pattern="[0-9]{10}"
-        title="Enter a 10-digit phone number using numbers only (example: 4075551234).">
-    </p>
+      <p>
+        <label for="phone">Phone:</label>
+        <input
+          id="phone"
+          type="tel"
+          name="phone"
+          required
+          pattern="[0-9]{10}"
+          title="Enter a 10-digit phone number using numbers only (example: 4075551234)."
+        />
+      </p>
 
-    <p>
-      <label for="email">Email:</label>
-      <input id="email" type="email" name="email" required title="Enter your email">
-    </p>
+      <p>
+        <label for="email">Email:</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          required
+          title="Enter your email"
+        />
+      </p>
 
-    <h2>Select Pizza Size</h2>
-    <p>
-      <label for="size">Pizza Size:</label>
-      <select id="size" name="size" required title="Choose a pizza size.">
-        <option value="" selected disabled>--Select Size--</option>
-        <option value="Small">Small</option>
-        <option value="Medium">Medium</option>
-        <option value="Large">Large</option>
-      </select>
-    </p>
+      <h2>Select Pizza Size</h2>
+      <p>
+        <label for="size" title="Choose the size of your pizza">
+          Pizza Size:
+        </label>
 
-    <h2>Select Sauce</h2>
-    <p>
-      <input id="sauce-marinara" type="radio" name="sauce" value="marinara" required>
-      <label for="sauce-marinara" title="Classic marinara tomato sauce">Marinara</label>
-    </p>
+        <select id="size" name="size" required>
+          <option value="" disabled selected>--Select Size--</option>
+          <option value="Small" title="Small pizza (10 inches)">Small</option>
+          <option value="Medium" title="Medium pizza (12 inches)">
+            Medium
+          </option>
+          <option value="Large" title="Large pizza (14 inches)">Large</option>
+        </select>
+      </p>
 
-    <p>
-      <input id="sauce-ranch" type="radio" name="sauce" value="ranch">
-      <label for="sauce-ranch" title="Creamy ranch sauce">Ranch</label>
-    </p>
+      <h2>Select Sauce</h2>
+      <p>
+        <input
+          id="sauce-marinara"
+          type="radio"
+          name="sauce"
+          value="marinara"
+          required
+        />
+        <label for="sauce-marinara" title="Classic marinara tomato sauce"
+          >Marinara</label
+        >
+      </p>
 
-    <p>
-      <input id="sauce-none" type="radio" name="sauce" value="none">
-      <label for="sauce-none" title="No sauce on the pizza">No Sauce</label>
-    </p>
+      <p>
+        <input id="sauce-ranch" type="radio" name="sauce" value="ranch" />
+        <label for="sauce-ranch" title="Creamy ranch sauce">Ranch</label>
+      </p>
 
-    <h2>Select Toppings</h2>
-    <p>
-      <input id="top-pepperoni" type="checkbox" name="toppings[]" value="pepperoni">
-      <label for="top-pepperoni" title="Add pepperoni">Pepperoni</label>
+      <p>
+        <input id="sauce-none" type="radio" name="sauce" value="none" />
+        <label for="sauce-none" title="No sauce on the pizza">No Sauce</label>
+      </p>
 
-      <input id="top-sausage" type="checkbox" name="toppings[]" value="sausage">
-      <label for="top-sausage" title="Add sausage">Sausage</label>
-    </p>
+      <h2>Select Toppings</h2>
+      <p>
+        <input
+          id="top-pepperoni"
+          type="checkbox"
+          name="toppings[]"
+          value="pepperoni"
+        />
+        <label for="top-pepperoni" title="Classic pepperoni slices">
+          Pepperoni
+        </label>
 
-    <p>
-      <input id="top-mushroom" type="checkbox" name="toppings[]" value="mushroom">
-      <label for="top-mushroom" title="Add mushrooms">Mushroom</label>
+        <input
+          id="top-sausage"
+          type="checkbox"
+          name="toppings[]"
+          value="sausage"
+        />
+        <label for="top-sausage" title="Italian sausage topping">
+          Sausage
+        </label>
+      </p>
 
-      <input id="top-pineapple" type="checkbox" name="toppings[]" value="pineapple">
-      <label for="top-pineapple" title="Add pineapple">Pineapple</label>
-    </p>
+      <p>
+        <input
+          id="top-mushroom"
+          type="checkbox"
+          name="toppings[]"
+          value="mushroom"
+        />
+        <label for="top-mushroom" title="Fresh sliced mushrooms">
+          Mushroom
+        </label>
 
-    <p>
-      <input id="top-peppers" type="checkbox" name="toppings[]" value="peppers">
-      <label for="top-peppers" title="Add peppers">Peppers</label>
+        <input
+          id="top-pineapple"
+          type="checkbox"
+          name="toppings[]"
+          value="pineapple"
+        />
+        <label for="top-pineapple" title="Sweet pineapple chunks">
+          Pineapple
+        </label>
+      </p>
 
-      <input id="top-onions" type="checkbox" name="toppings[]" value="onions">
-      <label for="top-onions" title="Add onions">Onions</label>
-    </p>
+      <p>
+        <input
+          id="top-peppers"
+          type="checkbox"
+          name="toppings[]"
+          value="peppers"
+        />
+        <label for="top-peppers" title="Green bell peppers"> Peppers </label>
 
-    <h2>Additional Instructions</h2>
-    <p>
-      <label for="instructions">Instructions:</label><br>
-      <textarea
-        id="instructions"
-        name="instructions"
-        rows="3"
-        cols="30"
-        title="Optional instructions such as allergies or cooking preferences"></textarea>
-    </p>
+        <input
+          id="top-onions"
+          type="checkbox"
+          name="toppings[]"
+          value="onions"
+        />
+        <label for="top-onions" title="Sliced onions"> Onions </label>
+      </p>
 
-    <p>
-      <input type="submit" value="Submit" title="Submit your pizza order">
-    </p>
-  </form>
+      <h2>Additional Instructions</h2>
+      <p>
+        <label
+          for="instructions"
+          title="Add special instructions like allergies, extra baking, or no cheese"
+        >
+          Additional Instructions:
+        </label>
+        <br />
+        <textarea
+          id="instructions"
+          name="instructions"
+          rows="3"
+          cols="30"
+          title="Optional notes such as allergies, cooking preferences, or special requests"
+        ></textarea>
+      </p>
+    </form>
 
-  <table border="5">
-    <caption>List of My Favorite Games</caption>
+    <table border="5">
+      <caption>
+        List of My Favorite Games
+      </caption>
 
-    <thead>
-      <tr>
-        <th scope="col">Developer</th>
-        <th scope="col">Title</th>
-        <th scope="col">Year</th>
-      </tr>
-    </thead>
+      <thead>
+        <tr>
+          <th scope="col">Developer</th>
+          <th scope="col">Title</th>
+          <th scope="col">Year</th>
+        </tr>
+      </thead>
 
-    <tbody>
-      <tr>
-        <td rowspan="2">Bungie</td>
-        <td>Halo 3</td>
-        <td>2007</td>
-      </tr>
-      <tr>
-        <td>Destiny</td>
-        <td>2012</td>
-      </tr>
-      <tr>
-        <td>Activision</td>
-        <td>Call of Duty 4</td>
-        <td>2007</td>
-      </tr>
-      <tr>
-        <td>Mojang</td>
-        <td>Minecraft</td>
-        <td>2011</td>
-      </tr>
-      <tr>
-        <td colspan="3">Count: 4</td>
-      </tr>
-    </tbody>
-  </table>
-</body>
+      <tbody>
+        <tr>
+          <td rowspan="2">Bungie</td>
+          <td>Halo 3</td>
+          <td>2007</td>
+        </tr>
+        <tr>
+          <td>Destiny</td>
+          <td>2012</td>
+        </tr>
+        <tr>
+          <td>Activision</td>
+          <td>Call of Duty 4</td>
+          <td>2007</td>
+        </tr>
+        <tr>
+          <td>Mojang</td>
+          <td>Minecraft</td>
+          <td>2011</td>
+        </tr>
+        <tr>
+          <td colspan="3">Count: 4</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
