@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+     <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    h2, p {
+      margin: 10px;
+    }
+
+    /* ONLY the navbar gets these styles */
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar li a:hover {
+      background-color: #111111;
+    }
+  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Synology NAS Setup Project</title>
+  </head>
+
+  <body>
+        <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="PizzaOrdering.html">Pizza Ordering</a></li>
+      <li><a href="cssExample.html">CSS Example</a></li>
+      <li><a href="projectOne.html">Project One</a></li>
+      <li><a href="projectTwo.html">Project Two</a></li>
+    </ul>
+    <header>
+      <h1>Personal Project: Setting Up a Synology NAS</h1>
+      <p>
+        This page documents my personal home-lab project where I planned, built,
+        and configured a Synology NAS for reliable storage, backups, and file
+        sharing.
+      </p>
+    </header>
+
+    <main>
+      <article>
+        <section aria-labelledby="project-image">
+          <h2 id="project-image">Project Image</h2>
+
+          <figure>
+            <img
+              src="synology.png"
+              alt="A Synology NAS on a desk with ethernet connected and drive bays installed"
+              width="600"
+              height="400"
+            />
+            <figcaption>
+              Synology NAS setup used for backups, storage, and home network
+              services.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section aria-labelledby="description">
+          <h2 id="description">Project Description</h2>
+          <p>
+            I set up a Synology NAS to centralize my files and improve my backup
+            strategy. The goal was to have always-on storage for my devices,
+            simple file sharing, and automated backups that run on a schedule. I
+            configured storage using Synology’s tools, set up user accounts and
+            permissions, and tested access from multiple devices on my home
+            network.
+          </p>
+          <p>
+            After the initial setup, I verified that backups worked correctly by
+            doing test restores, monitored storage health, and adjusted settings
+            to balance performance and reliability. This project helped me
+            understand practical storage planning and how a NAS fits into a home
+            lab environment.
+          </p>
+        </section>
+
+        <section aria-labelledby="skills">
+          <h2 id="skills">Skills Learned</h2>
+          <ul>
+            <li>
+              Basic NAS and storage concepts (RAID/SHR, drive health, and
+              capacity planning)
+            </li>
+            <li>
+              Network setup and troubleshooting (DHCP vs static IP,
+              router/switch basics)
+            </li>
+            <li>User accounts, permissions, and shared folder management</li>
+            <li>
+              Backup planning and verification (scheduled backups and test
+              restores)
+            </li>
+            <li>
+              Monitoring and maintenance (SMART status checks, alerts, and
+              updates)
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Andrew Holmes</p>
+    </footer>
+  </body>
+</html>
