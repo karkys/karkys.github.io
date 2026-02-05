@@ -1,0 +1,147 @@
+article > p:first-of-type::first-letter {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+}
+a[href*="google.com"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-left: 0.35em;
+  background: url('arrow.png') no-repeat center center / contain;
+  vertical-align: middle;
+}
+article {
+  color: #aaa;
+  transition: color 2s ease, transform 2s ease;
+  transform-origin: center top;
+}
+
+article:hover {
+  color: #222;
+  transform: scale(1.02);
+}
+#menuItems {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  box-sizing: border-box;
+  padding: 16px;
+  background: #8a2be2;
+  border-right: 4px solid #ff1493;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#menuItems button {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  background: #f2f2f2;
+  color: #111;
+  border: 1px solid #999;
+  border-radius: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 150ms ease;
+}
+
+#menuItems button:hover {
+  background: #c2d7ff;
+}
+#jumpMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 8px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 300ms ease, opacity 200ms ease;
+}
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover {
+  max-height: 400px;
+  opacity: 1;
+}
+
+#jumpMenu li a {
+  display: block;
+  padding: 8px 10px;
+  margin: 4px 0;
+  border-radius: 0;
+  color: #111;
+  text-decoration: none;
+  background: #f2f2f2;
+  border: 1px solid #999;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+#jumpMenu li a:hover {
+  background: #c8e6c9;
+  color: #000;
+}
+main {
+  margin-left: 260px;
+  padding: 16px;
+  padding-top: 72px;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 240px;
+  right: 0;
+  height: 56px;
+  background: #2e7d32;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+header p {
+  margin: 0;
+  padding-left: 12px;
+  font-weight: 400;
+  color: #ffffff;
+}
+#contactBox {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  background: #fff;
+  border: 2px solid #000;
+  padding: 12px 16px;
+  color: #000;
+  text-decoration: none;
+  z-index: 1100;
+}
+
+#contactBox:hover {
+  background: #f0fff0;
+}
+footer#contact {
+  margin-top: 24px;
+  padding: 16px;
+  background: #f5f5f5;
+  border-top: 1px solid #ccc;
+}
+
+footer#contact h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+footer#contact address {
+  font-style: normal;
+}
+
+footer#contact address p {
+  margin: 4px 0;
+}
+
+footer#contact a {
+  color: #0b57d0;
+  text-decoration: underline;
+}
