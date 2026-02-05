@@ -35,11 +35,18 @@ header > p {
   font-size: 18px;
 }
 
-header nav button {
+
+header nav button,
+header nav a {
+  display: inline-block;
   margin: 0 6px;
   padding: 12px 16px; 
   font-size: 14px;   
   border-radius: 0;  
+  border: 1px solid #ccc;
+  background: #efefef;
+  color: #000;
+  text-decoration: none;
 }
 
 
