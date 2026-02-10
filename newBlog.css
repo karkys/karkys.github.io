@@ -36,7 +36,8 @@ article:hover {
   gap: 8px;
 }
 
-#menuItems button {
+#menuItems button,
+#menuItems a.nav-btn {
   display: block;
   width: 100%;
   padding: 8px 10px;
@@ -47,9 +48,11 @@ article:hover {
   cursor: pointer;
   text-align: left;
   transition: background-color 150ms ease;
+  text-decoration: none;
 }
 
-#menuItems button:hover {
+#menuItems button:hover,
+#menuItems a.nav-btn:hover {
   background: #c2d7ff;
 }
 #jumpMenu {
