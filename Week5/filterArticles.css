@@ -173,7 +173,8 @@ nav{
     background-color: black;
 }
 
-nav button
+nav button,
+nav a
 {
     color:white;
     background-color: blue;
@@ -185,11 +186,13 @@ nav button
     text-wrap-mode: nowrap;
 }
 
-nav button:hover{
+nav button:hover,
+nav a:hover{
     background-color:darkgoldenrod;
 }
 
-nav button:active{
+nav button:active,
+nav a:active{
     background-color: gold;
 }
 
