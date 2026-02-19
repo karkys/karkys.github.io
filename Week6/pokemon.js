@@ -54,12 +54,24 @@ function getCryUrl(data) { // use the cry url from the api
   return data?.cries?.latest || "";
 }
 
-function fillMoves(data) { // put all moves in the 4 dropdowns
+function fillMoves(data) { // put only moves this pokemon can use (for one version)
   var movesArray = [];
   if (data && data.moves) {
     for (var i = 0; i < data.moves.length; i++) {
       var mv = data.moves[i];
-      if (mv && mv.move && mv.move.name) {
+      if (!mv || !mv.move || !mv.move.name) { continue; }
+      var keep = false;
+      // look at version_group_details and see if our version exists
+      if (mv.version_group_details && mv.version_group_details.length > 0) {
+        for (var j = 0; j < mv.version_group_details.length; j++) {
+          var d = mv.version_group_details[j];
+          if (d && d.version_group && d.version_group.name === "sword-shield") {
+            keep = true;
+            break;
+          }
+        }
+      }
+      if (keep) {
         movesArray.push(mv.move.name);
       }
     }
